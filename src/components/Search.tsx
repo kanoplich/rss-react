@@ -27,7 +27,7 @@ class Search extends Component {
     return (
       <div className="search__wrapper">
         <input
-          type="search"
+          type="text"
           className="search"
           placeholder="search..."
           value={searchValue}
