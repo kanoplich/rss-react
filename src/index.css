@@ -134,3 +134,45 @@ td {
 td:first-child {
   font-style: italic;
 }
+.title {
+  margin-top: 50px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3rem;
+}
+.not_found__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50vh;
+}
+.not_found__wrapper > div {
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3rem;
+}
+.not_found__wrapper > p {
+  margin-top: 30px;
+  display: flex;
+  font-size: 1rem;
+}
+.not_found__wrapper > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #FFFFFF;
+  background-color: #be3455;
+  width: 200px;
+  height: 50px;
+  text-decoration: none;
+  margin-top: 30px;
+}
