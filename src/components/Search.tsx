@@ -9,13 +9,20 @@ class Search extends Component {
     searchValue: '',
   };
 
+  componentWillUnmount() {
+    localStorage.setItem('searchValue', this.state.searchValue);
+  }
+
+  componentDidMount() {
+    this.setState({ searchValue: localStorage.getItem('searchValue') });
+  }
+
   handleChange = ({ target: { value } }: React.ChangeEvent<HTMLInputElement>) => {
     this.setState({ searchValue: value });
   };
 
   render() {
     const { searchValue } = this.state;
-    console.log(searchValue);
 
     return (
       <div className="search__wrapper">
@@ -23,6 +30,7 @@ class Search extends Component {
           type="search"
           className="search"
           placeholder="search..."
+          value={searchValue}
           onChange={this.handleChange}
         />
       </div>
