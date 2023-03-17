@@ -71,14 +71,14 @@ body {
   gap: 2rem;
   font-size: 1.3rem;
 }
+
+/* -- Search component -- */
+
 .search__wrapper {
   display: flex;
   justify-content: center;
 }
 .search {
-  font-weight: 400;
-  font-family:'Montserrat', sans-serif;
-  font-style: normal;
   font-size: 1em;
   margin: 2rem 0 2rem 0;
   padding: 20px 20px 20px 40px;
@@ -107,6 +107,9 @@ body {
   flex-wrap: wrap;
   gap: 0 50px;
 }
+
+/* -- Card component -- */
+
 .card {
   display: block;
   width: 300px;
@@ -134,14 +137,18 @@ td {
 td:first-child {
   font-style: italic;
 }
+
+/* -- About page -- */
+
 .title {
   margin-top: 50px;
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
   font-weight: 700;
   font-size: 3rem;
 }
+
+/* -- Not found page -- */
+
 .not_found__wrapper {
   display: flex;
   justify-content: center;
@@ -151,8 +158,6 @@ td:first-child {
 }
 .not_found__wrapper > div {
   display: flex;
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
   font-weight: 700;
   font-size: 3rem;
 }
@@ -160,19 +165,4 @@ td:first-child {
   margin-top: 30px;
   display: flex;
   font-size: 1rem;
-}
-.not_found__wrapper > a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: #FFFFFF;
-  background-color: #be3455;
-  width: 200px;
-  height: 50px;
-  text-decoration: none;
-  margin-top: 30px;
 }
