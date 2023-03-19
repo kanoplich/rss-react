@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event';
 import App from './App';
 import { BrowserRouter, MemoryRouter } from 'react-router-dom';
 
-describe('App component', () => {
+describe('App', () => {
   it('full app rendering/navigating', async () => {
     render(<App />, { wrapper: BrowserRouter });
     const user = userEvent.setup();

@@ -1,4 +1,3 @@
-import { CardData } from 'type';
 import url1 from '../assets/rungrado-1st-of-may-stadium.png';
 import url2 from '../assets/Motera-Stadium.png';
 import url3 from '../assets/Michigan_Stadium-scaled.png';
@@ -8,6 +7,16 @@ import url6 from '../assets/kyle-field.png';
 import url7 from '../assets/neyland-stadium.png';
 import url8 from '../assets/tiger-stadium.png';
 import url9 from '../assets/bryant-denny-stadium.png';
+
+export type CardData = {
+  id: number;
+  location: string;
+  name: string;
+  url: string;
+  capacity: string;
+  year: number;
+  used: string;
+};
 
 const data: CardData[] = [
   {

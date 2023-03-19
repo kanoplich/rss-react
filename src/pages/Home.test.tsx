@@ -6,6 +6,9 @@ describe('Home component', () => {
   it('Home renders', () => {
     render(<Home />);
     expect(screen.getByRole('textbox')).toBeInTheDocument();
-    expect(screen.getAllByRole('table')).toBeInTheDocument();
+    const cards = screen.getAllByRole('img');
+    cards.forEach((card) => {
+      expect(card).toBeInTheDocument();
+    });
   });
 });
