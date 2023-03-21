@@ -1,7 +1,7 @@
 import { it, describe } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import Card from './Card';
-import data from '../Data/CardData';
+import data from '../../Data/CardData';
 
 describe('Card', () => {
   it('Card renders', () => {

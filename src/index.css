@@ -86,7 +86,7 @@ body {
   height: 2.5rem;
   border-radius: 25px;
   border: 2px solid #be3455;
-  background-image: url('./assets/search.svg');
+  background-image: url('./assets/svg/search.svg');
   background-repeat: no-repeat, repeat;
   background-position: left 15px top 50%, 0 0;
   background-size: auto;
@@ -106,6 +106,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 0 50px;
+  min-height: calc(100vh - 290px);
 }
 
 /* -- Card component -- */
@@ -141,10 +142,12 @@ td:first-child {
 /* -- About page -- */
 
 .title {
-  margin-top: 50px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 700;
   font-size: 3rem;
+  min-height: calc(100vh - 180px);
 }
 
 /* -- Not found page -- */
@@ -154,7 +157,7 @@ td:first-child {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 50vh;
+  min-height: calc(100vh - 180px);
 }
 .not_found__wrapper > div {
   display: flex;
@@ -165,4 +168,32 @@ td:first-child {
   margin-top: 30px;
   display: flex;
   font-size: 1rem;
+}
+
+/* -- Footer -- */
+
+.footer {
+  background-color: #be3455 ;
+  height: 80px;
+}
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-size: 1.8rem;
+  height: 80px;
+}
+.footer__school {
+  background-image: url('./assets/svg/rss.svg');
+  background-repeat: no-repeat;
+  width: 120px;
+  height: 50px;
+}
+.footer__github {
+  cursor: pointer;
+  background-image: url('./assets/svg/git.svg');
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 50px;
 }

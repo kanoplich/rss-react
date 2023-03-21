@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { CardData } from '../Data/CardData';
+import { CardData } from '../../Data/CardData';
 
 type PropsType = {
   data: CardData;
