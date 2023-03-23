@@ -170,6 +170,93 @@ td:first-child {
   font-size: 1rem;
 }
 
+/* -- Form page -- */
+
+.form {
+  max-width: 320px;
+  margin: 50px auto 50px auto;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #be3455;
+  background-color: azure;
+}
+.form_title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+.form_control {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.form_control input,
+.form_control select {
+  border-bottom: 2px solid #be3455;
+  background-color: azure;
+  font-size: 1em;
+  width: 100%;
+  margin: 0 15px 0 15px;
+  padding: 5px 5px 5px 5px;
+}
+.form_control input:focus,
+.form_control select:focus {
+  outline: none;
+}
+.form_control label,
+.form_control legend {
+  text-transform: uppercase;
+  font-size: 0.9em;
+  color: grey;
+}
+.form_fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.form_fieldset legend  {
+  margin-bottom: 15px;
+}
+.form_fieldset label  {
+  cursor: pointer;
+  color: black;
+}
+input[type="radio"] {
+  cursor: pointer;
+  width: 15px;
+  margin: 5px 3px 0 15px;
+}
+input[type="checkbox"] {
+  cursor: pointer;
+  width: 15px;
+  margin-left: 50px;
+}
+input[type="radio"]+label {
+  cursor: pointer;
+  color: black;
+}
+.form_button {
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  font-size: 1em;
+  width: 150px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #be3455;
+  color: white;
+  text-transform: uppercase;
+  margin-top: 50px;
+}
+.line {
+  border-bottom: 2px solid #be3455;
+  margin-bottom: 50px;
+}
+
 /* -- Footer -- */
 
 .footer {
