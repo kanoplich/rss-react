@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
 
-class InputDate extends Component {
+type InputDateProps = {
+  inputRef: React.RefObject<HTMLInputElement>;
+  label: string;
+  error: string;
+};
+class InputDate extends Component<InputDateProps> {
   render() {
+    const { label, error, inputRef } = this.props;
     return (
       <>
         <div className="form_control">
-          <label htmlFor="birthday">Birthday:</label>
-          <input type="date" id="birthday" />
+          <label htmlFor="birthday">{label}:</label>
+          <input type="date" id="birthday" ref={inputRef} />
         </div>
-        <div className="form_error"></div>
+        <div className="form_error">{error}</div>
       </>
     );
   }

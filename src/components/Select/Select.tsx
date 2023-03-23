@@ -1,20 +1,27 @@
 import React, { Component } from 'react';
 
-class Select extends Component {
+type SelectProps = {
+  selectRef: React.RefObject<HTMLSelectElement>;
+  label: string;
+  error: string;
+  options: string[];
+};
+class Select extends Component<SelectProps> {
   render() {
+    const { label, error, options, selectRef } = this.props;
     return (
       <>
         <div className="form_control">
-          <label htmlFor="country">Country:</label>
-          <select id="country">
-            <option value="" hidden></option>
-            <option value="BY">BELARUS</option>
-            <option value="RU">RUSSIAN FEDERATION</option>
-            <option value="UA">UKRAINE</option>
-            <option value="other">other country</option>
+          <label htmlFor="country">{label}:</label>
+          <select id="country" ref={selectRef}>
+            {options.map((item, index) => (
+              <option key={index} value={item}>
+                {item}
+              </option>
+            ))}
           </select>
         </div>
-        <div className="form_error"></div>
+        <div className="form_error">{error}</div>
       </>
     );
   }
