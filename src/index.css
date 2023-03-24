@@ -45,6 +45,12 @@ html {
   max-width: 1200px;
   width: calc(100% - 20px);
 }
+.main__container {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: calc(100% - 20px);
+  min-height: calc(100vh - 230px);
+}
 body {
   font-weight: 400;
   font-family:'Montserrat', sans-serif;
@@ -106,7 +112,6 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 0 50px;
-  min-height: calc(100vh - 290px);
 }
 
 /* -- Card component -- */
@@ -138,6 +143,13 @@ td {
 td:first-child {
   font-style: italic;
 }
+.card__data {
+  font-size: 1rem;
+  padding: 10px;
+}
+.card__data > p {
+  margin: 5px 0 5px 0;
+}
 
 /* -- About page -- */
 
@@ -146,8 +158,9 @@ td:first-child {
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 3rem;
-  min-height: calc(100vh - 180px);
+  font-size: 2rem;
+  min-height: 100%;
+  margin-top: 50px;
 }
 
 /* -- Not found page -- */
