@@ -17,5 +17,7 @@ describe('Layout', () => {
     expect(screen.getByText(/about page/i)).toBeInTheDocument();
     await user.click(screen.getByText(/home/i));
     expect(screen.getByText(/home page/i)).toBeInTheDocument();
+    await user.click(screen.getByText(/form/i));
+    expect(screen.getByText(/form page/i)).toBeInTheDocument();
   });
 });

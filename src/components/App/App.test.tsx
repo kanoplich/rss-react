@@ -11,6 +11,8 @@ describe('App', () => {
     expect(screen.getByText(/home page/i)).toBeInTheDocument();
     await user.click(screen.getByText(/about/i));
     expect(screen.getByText(/about us page/i)).toBeInTheDocument();
+    await user.click(screen.getByText(/form/i));
+    expect(screen.getByText(/form page/i)).toBeInTheDocument();
   });
   it('landing on a bad page', () => {
     const badRoute = '/some/bad/route';

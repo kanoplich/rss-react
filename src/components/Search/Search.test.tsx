@@ -18,9 +18,8 @@ describe('Search component', () => {
   });
   it('typing in Search works', async () => {
     render(<Search />);
-    const user = userEvent.setup();
     expect(screen.queryByDisplayValue(/test/)).toBeNull();
-    await user.type(screen.getByRole('textbox'), 'test');
-    expect(screen.queryByDisplayValue(/test/i)).toBeInTheDocument();
+    await userEvent.type(screen.getByRole('textbox'), 'test');
+    expect(screen.getByDisplayValue(/test/i)).toBeInTheDocument();
   });
 });

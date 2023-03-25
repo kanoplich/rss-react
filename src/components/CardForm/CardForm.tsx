@@ -13,9 +13,15 @@ class CardForm extends Component<CardFromProps> {
         <img src={data.image} alt="image" />
         <h2 className="card__name">{data.name}</h2>
         <div className="card__data">
-          <p>Birthday: {data.birthday}</p>
-          <p>Country: {data.country}</p>
-          <p>Gender: {data.gender}</p>
+          <p>
+            Birthday: <span>{data.birthday}</span>
+          </p>
+          <p>
+            Country: <span>{data.country}</span>
+          </p>
+          <p>
+            Gender: <span>{data.gender}</span>
+          </p>
         </div>
       </div>
     );
