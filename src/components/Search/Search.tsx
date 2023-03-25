@@ -14,7 +14,9 @@ class Search extends Component {
   }
 
   componentDidMount() {
-    this.setState({ searchValue: localStorage.getItem('searchValue') });
+    if (localStorage.getItem('searchValue') !== null) {
+      this.setState({ searchValue: localStorage.getItem('searchValue') });
+    }
   }
 
   handleChange = ({ target: { value } }: React.ChangeEvent<HTMLInputElement>) => {
