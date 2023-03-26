@@ -11,7 +11,7 @@ class InputDate extends Component<InputDateProps> {
       <>
         <div className="form_control">
           <label htmlFor="birthday">Birthday:</label>
-          <input data-testId="date-birthday" type="date" id="birthday" ref={inputRef} />
+          <input data-testid="date-birthday" type="date" id="birthday" ref={inputRef} />
         </div>
         <div className="form_error">{error}</div>
       </>

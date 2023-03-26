@@ -14,7 +14,7 @@ class Select extends Component<SelectProps> {
           <label htmlFor="country">Country:</label>
           <select id="country" ref={selectRef}>
             {options.map((item, index) => (
-              <option key={index} value={item}>
+              <option key={index} defaultValue={item}>
                 {item}
               </option>
             ))}

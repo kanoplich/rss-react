@@ -15,11 +15,17 @@ class InputRadio extends Component<InputRadioProps> {
           <label>
             Gender:
             <label htmlFor="male" className="form_label">
-              <input type="radio" name="gender" id="male" value="MALE" ref={inputRefMale} />
+              <input type="radio" name="gender" id="male" defaultValue="MALE" ref={inputRefMale} />
               Male
             </label>
             <label htmlFor="female" className="form_label">
-              <input type="radio" name="gender" id="female" value="FEMALE" ref={inputRefFemale} />
+              <input
+                type="radio"
+                name="gender"
+                id="female"
+                defaultValue="FEMALE"
+                ref={inputRefFemale}
+              />
               Female
             </label>
           </label>
