@@ -9,7 +9,7 @@ const inputRef: React.RefObject<HTMLInputElement> = React.createRef();
 describe('InputDate', () => {
   it('InputDate renders', () => {
     render(<InputDate error="error message" inputRef={inputRef} />);
-    expect(screen.getByText(/birthday/i)).toBeInTheDocument();
+    expect(screen.getByLabelText(/birthday/i)).toBeInTheDocument();
     expect(screen.getByText(/error message/i)).toBeInTheDocument();
   });
   it('typing in InputDate works', async () => {
