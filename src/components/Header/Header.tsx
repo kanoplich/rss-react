@@ -1,55 +1,48 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-type StateType = {
-  title: string;
-};
+const Header = () => {
+  const [title, setTitle] = useState('');
 
-class Header extends Component {
-  state: StateType = {
-    title: '',
+  const handleClick = (str: string) => {
+    setTitle(str);
   };
 
-  componentDidMount() {
-    this.handleClick();
-  }
+  useEffect(() => {
+    switch (window.location.pathname) {
+      case '/':
+        setTitle('Home page');
+        break;
+      case '/about':
+        setTitle('About page');
+        break;
+      case '/form':
+        setTitle('Form page');
+        break;
+      default:
+        setTitle('Not found page');
+        break;
+    }
+  }, []);
 
-  handleClick = () => {
-    this.setState(() => {
-      let title = 'Not found page';
-      if (window.location.pathname === '/') {
-        title = 'Home page';
-      } else if (window.location.pathname === '/about') {
-        title = 'About page';
-      } else if (window.location.pathname === '/form') {
-        title = 'Form page';
-      }
-      return {
-        title: title,
-      };
-    });
-  };
-  render() {
-    const { title } = this.state;
-    return (
-      <header className="header">
-        <div className="header__container container">
-          <h1>{title}</h1>
-          <div className="header__link">
-            <Link to="/" onClick={this.handleClick}>
-              Home
-            </Link>
-            <Link to="/about" onClick={this.handleClick}>
-              About
-            </Link>
-            <Link to="/form" onClick={this.handleClick}>
-              Form
-            </Link>
-          </div>
+  return (
+    <header className="header">
+      <div className="header__container container">
+        <h1>{title}</h1>
+        <div className="header__link">
+          <Link to="/" onClick={() => handleClick('Home page')}>
+            Home
+          </Link>
+          <Link to="/about" onClick={() => handleClick('About page')}>
+            About
+          </Link>
+          <Link to="/form" onClick={() => handleClick('Form page')}>
+            Form
+          </Link>
         </div>
-      </header>
-    );
-  }
-}
+      </div>
+    </header>
+  );
+};
 
 export default Header;
