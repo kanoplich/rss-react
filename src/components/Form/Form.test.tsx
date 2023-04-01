@@ -3,15 +3,6 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Form from './Form';
 
-const testData = {
-  name: 'Andrei',
-  birthday: '2000-01-01',
-  country: 'POLAND',
-  gender: 'male',
-  image: '',
-  terms: true,
-};
-
 describe('Form', () => {
   it('Form renders', () => {
     render(<Form getData={() => {}} />);

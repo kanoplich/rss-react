@@ -7,7 +7,4 @@ describe('FormPage', () => {
     render(<FormPage />);
     expect(screen.getByText(/no card/i)).toBeInTheDocument();
   });
-  it('', () => {
-    render(<FormPage />);
-  });
 });
