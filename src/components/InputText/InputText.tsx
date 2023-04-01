@@ -11,8 +11,9 @@ const InputText = ({ register, error }: InputTextProps) => {
   return (
     <>
       <div className="form_control">
-        <label>Name:</label>
+        <label htmlFor="name">Name:</label>
         <input
+          id="name"
           {...register('name', {
             required: 'Field is required',
             minLength: {

@@ -1,15 +1,14 @@
 import React from 'react';
 import { it, describe } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { render, renderHook, screen } from '@testing-library/react';
 import Select from './Select';
-
-const options = ['test'];
-const selectRef: React.RefObject<HTMLSelectElement> = React.createRef();
+import { useForm } from 'react-hook-form';
+import { CardFormType } from 'types';
 
 describe('Select', () => {
+  const { result } = renderHook(() => useForm<CardFormType>());
   it('Select renders', () => {
-    render(<Select error="error message" options={options} selectRef={selectRef} />);
-    expect(screen.getByText(/error message/i)).toBeInTheDocument();
-    expect(screen.getByText(/country/i)).toBeInTheDocument();
+    render(<Select register={result.current.register} error={result.current.formState.errors} />);
+    expect(screen.getByLabelText(/country/i)).toBeInTheDocument();
   });
 });

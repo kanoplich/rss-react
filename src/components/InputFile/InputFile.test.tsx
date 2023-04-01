@@ -1,14 +1,16 @@
 import React from 'react';
 import { it, describe } from 'vitest';
-import { screen, render } from '@testing-library/react';
+import { screen, render, renderHook } from '@testing-library/react';
 import InputFile from './InputFile';
-
-const inputRef: React.RefObject<HTMLInputElement> = React.createRef();
+import { useForm } from 'react-hook-form';
+import { CardFormType } from 'types';
 
 describe('InputFile', () => {
+  const { result } = renderHook(() => useForm<CardFormType>());
   it('InputFile renders', () => {
-    render(<InputFile error="error message" inputRef={inputRef} />);
-    expect(screen.getByText(/error message/i)).toBeInTheDocument();
-    expect(screen.getByText(/image/i)).toBeInTheDocument();
+    render(
+      <InputFile register={result.current.register} error={result.current.formState.errors} />
+    );
+    expect(screen.getByLabelText(/image/i)).toBeInTheDocument();
   });
 });
