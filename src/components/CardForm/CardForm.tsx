@@ -1,8 +1,8 @@
 import React from 'react';
-import { CardFormType } from 'types';
+import { CardFormTypeSubmit } from 'types';
 
 type CardFromProps = {
-  data: CardFormType;
+  data: CardFormTypeSubmit;
 };
 
 const CardForm = ({ data }: CardFromProps) => {

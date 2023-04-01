@@ -1,39 +1,45 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { FieldErrors, UseFormRegister } from 'react-hook-form';
+import { CardFormType } from 'types';
 
 type InputRadioProps = {
-  inputRefMale: React.RefObject<HTMLInputElement>;
-  inputRefFemale: React.RefObject<HTMLInputElement>;
-  error: string;
+  register: UseFormRegister<CardFormType>;
+  error: FieldErrors<CardFormType>;
 };
 
-class InputRadio extends Component<InputRadioProps> {
-  render() {
-    const { error, inputRefMale, inputRefFemale } = this.props;
-    return (
-      <>
-        <div className="form_control">
-          <label>
-            Gender:
-            <label htmlFor="male" className="form_label">
-              <input type="radio" name="gender" id="male" defaultValue="MALE" ref={inputRefMale} />
-              Male
-            </label>
-            <label htmlFor="female" className="form_label">
-              <input
-                type="radio"
-                name="gender"
-                id="female"
-                defaultValue="FEMALE"
-                ref={inputRefFemale}
-              />
-              Female
-            </label>
+const InputRadio = ({ register, error }: InputRadioProps) => {
+  return (
+    <>
+      <div className="form_control">
+        <label>
+          Gender:
+          <label htmlFor="male" className="form_label">
+            <input
+              type="radio"
+              id="male"
+              defaultValue="MALE"
+              {...register('gender', { required: 'Field is required' })}
+            />
+            Male
           </label>
-        </div>
-        <div className="form_error">{error}</div>
-      </>
-    );
-  }
-}
+          <label htmlFor="female" className="form_label">
+            <input
+              type="radio"
+              id="female"
+              defaultValue="FEMALE"
+              {...register('gender', { required: 'Field is required' })}
+            />
+            Female
+          </label>
+        </label>
+      </div>
+      {error.gender ? (
+        <div className="form_error">{error.gender.message}</div>
+      ) : (
+        <div className="form_error"></div>
+      )}
+    </>
+  );
+};
 
 export default InputRadio;

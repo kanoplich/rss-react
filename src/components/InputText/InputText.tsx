@@ -1,23 +1,38 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { FieldErrors, UseFormRegister } from 'react-hook-form';
+import { CardFormType } from 'types';
 
 type InputTextProps = {
-  inputRef: React.RefObject<HTMLInputElement>;
-  error: string;
+  register: UseFormRegister<CardFormType>;
+  error: FieldErrors<CardFormType>;
 };
 
-class InputText extends Component<InputTextProps> {
-  render() {
-    const { inputRef, error } = this.props;
-    return (
-      <>
-        <div className="form_control">
-          <label htmlFor="username">Name:</label>
-          <input type="text" id="username" name="username" ref={inputRef} />
-        </div>
-        <div className="form_error">{error}</div>
-      </>
-    );
-  }
-}
+const InputText = ({ register, error }: InputTextProps) => {
+  return (
+    <>
+      <div className="form_control">
+        <label>Name:</label>
+        <input
+          {...register('name', {
+            required: 'Field is required',
+            minLength: {
+              value: 2,
+              message: 'Name must be longer than one character',
+            },
+            pattern: {
+              value: /^[А-ЯA-Z]/,
+              message: 'Name must start with a capital letter',
+            },
+          })}
+        />
+      </div>
+      {error.name ? (
+        <div className="form_error">{error.name.message}</div>
+      ) : (
+        <div className="form_error"></div>
+      )}
+    </>
+  );
+};
 
 export default InputText;

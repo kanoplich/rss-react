@@ -1,24 +1,28 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { FieldErrors, UseFormRegister } from 'react-hook-form';
+import { CardFormType } from 'types';
 
 type InputCheckboxProps = {
-  inputRef: React.RefObject<HTMLInputElement>;
-  error: string;
+  register: UseFormRegister<CardFormType>;
+  error: FieldErrors<CardFormType>;
 };
 
-class InputCheckbox extends Component<InputCheckboxProps> {
-  render() {
-    const { error, inputRef } = this.props;
-    return (
-      <>
-        <div className="form_control">
-          <label className="form_label">
-            <input type="checkbox" ref={inputRef} />I agree to the terms of service
-          </label>
-        </div>
-        <div className="form_error">{error}</div>
-      </>
-    );
-  }
-}
+const InputCheckbox = ({ register, error }: InputCheckboxProps) => {
+  return (
+    <>
+      <div className="form_control">
+        <label className="form_label">
+          <input type="checkbox" {...register('terms', { required: 'Field is required' })} />I agree
+          to the terms of service
+        </label>
+      </div>
+      {error.terms ? (
+        <div className="form_error">{error.terms.message}</div>
+      ) : (
+        <div className="form_error"></div>
+      )}
+    </>
+  );
+};
 
 export default InputCheckbox;
