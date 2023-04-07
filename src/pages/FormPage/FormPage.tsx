@@ -31,7 +31,7 @@ const FormPage = () => {
           No card
         </div>
       ) : (
-        <div className="card__wrapper">
+        <div className="card__form_wrapper">
           {formData.map((data, index) => (
             <CardForm key={index} data={data} />
           ))}

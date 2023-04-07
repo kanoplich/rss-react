@@ -1,11 +1,26 @@
+interface InfoData {
+  count: string;
+  pages: string;
+  next: string;
+  prev: string;
+}
+
+export type FetchData = {
+  info: InfoData;
+  results: CardData[];
+};
+
 export type CardData = {
   id: number;
-  location: string;
   name: string;
+  status: string;
   url: string;
-  capacity: string;
-  year: number;
-  used: string;
+  image: string;
+  species: string;
+  gender: string;
+  location: {
+    name: string;
+  };
 };
 
 export type CardFormType = {
