@@ -163,6 +163,23 @@ body {
   flex-wrap: wrap;
   gap: 0 50px;
 }
+.card__form {
+  display: block;
+  width: 300px;
+  height: 300px;
+  border: 2px solid #be3455;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: azure;
+  margin-bottom: 50px;
+}
+.card__form > img {
+  width: 300px;
+  height: 200px;
+}
+.card__data {
+  padding: 5px 5px 5px 5px;
+}
 .spinner {
   color: #be3455;
   display: flex;
@@ -303,6 +320,78 @@ input[type="checkbox"] {
 .line {
   border-bottom: 2px solid #be3455;
   margin-bottom: 50px;
+}
+
+/*--Modal--*/
+
+.modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: .3s;
+}
+.modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.modal__wrapper {
+  position: relative;
+  max-width: 500px;
+  background-color: #ffffff;
+  border: 2px solid #be3455;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 580px) {
+  .modal__wrapper {
+    flex-direction: column;
+    max-width: 300px;
+    padding: 5px;
+  }
+}
+
+.modal__close {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-image: url('./assets/svg/close.svg');
+  background-repeat: no-repeat;
+  width: 34px;
+  height: 34px;
+}
+.modal__image {
+  display: block;
+  width: 50%;
+}
+.modal__content {
+  width: 50%;
+}
+.modal__content_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px;
+}
+.modal__content_wrapper > p {
+  margin-bottom: 5px;
+}
+.modal__name {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
 
 /* -- Footer -- */

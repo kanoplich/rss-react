@@ -1,13 +1,15 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { FetchData } from 'types';
+import React, { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
+import { CardData, FetchData } from 'types';
 
 type PropsType = {
-  getData: (data: FetchData) => void;
+  getFetchData: (data: CardData[] | undefined) => void;
+  setData: (data: CardData[] | undefined) => void;
+  setIsPending: Dispatch<SetStateAction<boolean>>;
 };
 
-const Search = ({ getData }: PropsType) => {
+const Search = ({ getFetchData, setData, setIsPending }: PropsType) => {
   const [searchValue, setSearchValue] = useState(localStorage.getItem('searchValue') || '');
-  const [query] = useState(localStorage.getItem('searchValue') || '');
+  const [query, setQuery] = useState(localStorage.getItem('searchValue') || '');
   const searchRef = useRef<string>();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -19,22 +21,22 @@ const Search = ({ getData }: PropsType) => {
   }, [searchValue]);
 
   useEffect(() => {
-    fetchData(query);
-  }, [query]);
-
-  useEffect(() => {
     return () => localStorage.setItem('searchValue', searchRef.current || '');
   }, []);
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    fetchData(searchValue);
-  };
-
-  const fetchData = (query: string) => {
+  useEffect(() => {
     fetch(`https://rickandmortyapi.com/api/character/?page=1&name=${query}`)
       .then((response) => response.json())
-      .then((data: FetchData) => getData(data));
+      .then((data: FetchData) => getFetchData(data.results));
+  }, [query]);
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (query !== searchValue) {
+      setData(undefined);
+      setIsPending(true);
+      setQuery(searchValue);
+    }
   };
 
   return (

@@ -7,7 +7,7 @@ type CardFromProps = {
 
 const CardForm = ({ data }: CardFromProps) => {
   return (
-    <div className="card">
+    <div className="card__form">
       <img src={data.image} alt="image" />
       <h2 className="card__name">{data.name}</h2>
       <div className="card__data">
