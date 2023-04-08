@@ -1,4 +1,5 @@
 import React, { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
+import useFetch from '../../components/useFetch/useFetch';
 import { CardData, FetchData } from 'types';
 
 type PropsType = {
@@ -24,11 +25,11 @@ const Search = ({ getFetchData, setData, setIsPending }: PropsType) => {
     return () => localStorage.setItem('searchValue', searchRef.current || '');
   }, []);
 
-  useEffect(() => {
+  useFetch(() => {
     fetch(`https://rickandmortyapi.com/api/character/?page=1&name=${query}`)
       .then((response) => response.json())
       .then((data: FetchData) => getFetchData(data.results));
-  }, [query]);
+  }, query);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();

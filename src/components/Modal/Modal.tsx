@@ -19,12 +19,18 @@ const Modal = ({ active, setActive, data }: ModalProps) => {
             <div className="modal__content_wrapper">
               <p>Location: </p>
               <p>{data.location.name}</p>
+              <p>Origin: </p>
+              <p>{data.origin.name}</p>
               <p>Gender: </p>
               <p>{data.gender}</p>
+              <p>Type: </p>
+              <p>{data.type}</p>
               <p>Species: </p>
               <p>{data.species}</p>
               <p>Status: </p>
               <p>{data.status}</p>
+              <p>Created: </p>
+              <p>{new Date(data.created).toLocaleDateString('en-GB')}</p>
             </div>
           </div>
         </div>

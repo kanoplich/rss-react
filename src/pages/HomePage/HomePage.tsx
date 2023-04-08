@@ -10,18 +10,16 @@ const HomePage = () => {
   const [pending, setIsPending] = useState(true);
   const [modalActive, setModalActive] = useState(false);
   const getFetchData = (data: CardData[] | undefined) => {
-    setTimeout(() => {
-      if (data === undefined) {
-        setData(data);
-      } else {
-        const sortData: CardData[] = [];
-        for (let i = 0; i < data.length; i++) {
-          if (data[i].id <= 20) sortData.push(data[i]);
-        }
-        setData(sortData.length ? sortData : undefined);
+    if (data === undefined) {
+      setData(data);
+    } else {
+      const sortData: CardData[] = [];
+      for (let i = 0; i < data.length; i++) {
+        if (data[i].id <= 20) sortData.push(data[i]);
       }
-      setIsPending(false);
-    }, 2000);
+      setData(sortData.length ? sortData : undefined);
+    }
+    setIsPending(false);
   };
   const getFetchDataId = (data: CardData) => {
     setDataId(data);

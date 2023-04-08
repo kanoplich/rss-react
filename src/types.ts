@@ -18,9 +18,14 @@ export type CardData = {
   image: string;
   species: string;
   gender: string;
+  type: string;
   location: {
     name: string;
   };
+  origin: {
+    name: string;
+  };
+  created: string;
 };
 
 export type CardFormType = {
