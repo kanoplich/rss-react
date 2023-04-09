@@ -103,13 +103,17 @@ body {
   cursor: pointer;
   font-size: 1em;
   margin: 2rem 0 2rem 0;
+  font-size: 1em;
   width: 7rem;
   height: 2.5rem;
   border-radius: 25px;
-  border: 2px solid #be3455;
   background-color: #be3455;
   color: #ffffff;
-  font-weight: 700;
+  text-transform: uppercase;
+  box-shadow: inset 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+}
+.button:active {
+  box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 .search::-webkit-search-decoration,
 .search::-webkit-search-cancel-button,
@@ -359,6 +363,12 @@ input[type="checkbox"] {
     flex-direction: column;
     max-width: 300px;
     padding: 5px;
+  }
+  .search__wrapper {
+    flex-direction: column;
+  }
+  .search {
+    margin: 2rem 0 0 0;
   }
 }
 

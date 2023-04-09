@@ -1,6 +1,6 @@
 import { it, describe } from 'vitest';
-import { render, screen } from '@testing-library/react';
-import Card from './Card';
+import { screen, render } from '@testing-library/react';
+import Modal from './Modal';
 import { CardData } from 'types';
 
 const data: CardData = {
@@ -21,11 +21,13 @@ const data: CardData = {
   created: '04/11/2017',
 };
 
-describe('Card', () => {
-  it('Card renders', () => {
-    render(
-      <Card setActive={() => true} data={data} setDataId={() => undefined} getData={() => data} />
-    );
+describe('Modal', () => {
+  it('Modal renders', () => {
+    render(<Modal active={true} data={data} setActive={() => false} />);
     expect(screen.getByText(/morty smith/i)).toBeInTheDocument();
+  });
+  it('Modal not renders', () => {
+    render(<Modal active={false} data={data} setActive={() => false} />);
+    expect(screen.queryByText(/morty smith/i)).not.toBeNull();
   });
 });

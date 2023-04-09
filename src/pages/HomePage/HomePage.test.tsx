@@ -6,7 +6,7 @@ describe('Home component', () => {
   it('Home renders', () => {
     render(<HomePage />);
     expect(screen.getByRole('textbox')).toBeInTheDocument();
-    const cards = screen.getAllByRole('img');
+    const cards = screen.getAllByRole('button');
     cards.forEach((card) => {
       expect(card).toBeInTheDocument();
     });

@@ -1,9 +1,9 @@
-import React, { Dispatch, SetStateAction } from 'react';
+import React from 'react';
 import { CardData } from 'types';
 
 type ModalProps = {
+  setActive: (active: boolean) => void;
   active: boolean;
-  setActive: Dispatch<SetStateAction<boolean>>;
   data: CardData | undefined;
 };
 

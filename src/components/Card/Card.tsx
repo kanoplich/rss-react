@@ -1,9 +1,9 @@
-import React, { Dispatch, SetStateAction } from 'react';
+import React from 'react';
 import { CardData } from 'types';
 
 type PropsType = {
   data: CardData;
-  setActive: Dispatch<SetStateAction<boolean>>;
+  setActive: (active: boolean) => void;
   getData: (data: CardData) => void;
   setDataId: (card: CardData | undefined) => void;
 };

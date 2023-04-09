@@ -1,11 +1,11 @@
-import React, { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
-import useFetch from '../../components/useFetch/useFetch';
+import React, { useEffect, useRef, useState } from 'react';
+import useFetch from '../../hook/useFetch';
 import { CardData, FetchData } from 'types';
 
 type PropsType = {
   getFetchData: (data: CardData[] | undefined) => void;
   setData: (data: CardData[] | undefined) => void;
-  setIsPending: Dispatch<SetStateAction<boolean>>;
+  setIsPending: (active: boolean) => void;
 };
 
 const Search = ({ getFetchData, setData, setIsPending }: PropsType) => {
