@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import useFetch from '../../hook/useFetch';
 import { CardData, FetchData } from 'types';
+import { fetchRequest } from './Search.service';
 
 type PropsType = {
   getFetchData: (data: CardData[] | undefined) => void;
@@ -26,9 +27,7 @@ const Search = ({ getFetchData, setData, setIsPending }: PropsType) => {
   }, []);
 
   useFetch(() => {
-    fetch(`https://rickandmortyapi.com/api/character/?page=1&name=${query}`)
-      .then((response) => response.json())
-      .then((data: FetchData) => getFetchData(data.results));
+    fetchRequest(query).then((data: FetchData) => getFetchData(data.results));
   }, query);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {

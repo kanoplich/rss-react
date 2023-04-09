@@ -1,8 +1,9 @@
-import { describe, it } from 'vitest';
+import { Mock, describe, it, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Search from './Search';
 import { CardData } from 'types';
+import { fetchRequest } from './Search.service';
 
 const data: CardData[] = [
   {
@@ -23,6 +24,12 @@ const data: CardData[] = [
     created: '04/11/2017',
   },
 ];
+
+global.fetch = vi.fn(() =>
+  Promise.resolve({
+    json: () => Promise.resolve({ ...data }),
+  })
+) as Mock;
 
 describe('Search component', () => {
   it('Search renders', () => {
@@ -48,5 +55,10 @@ describe('Search component', () => {
     expect(screen.queryByDisplayValue(/test/)).toBeNull();
     await userEvent.type(screen.getByRole('textbox'), 'test');
     expect(screen.getByDisplayValue(/test/i)).toBeInTheDocument();
+  });
+  it('makes a GET request to fetch search and returns the result', async () => {
+    const cardData = await fetchRequest('');
+    expect(fetch).toHaveBeenCalledWith('https://rickandmortyapi.com/api/character/?page=1&name=');
+    expect([cardData]).toStrictEqual([{ ...data }]);
   });
 });

@@ -1,5 +1,6 @@
 import React from 'react';
 import { CardData } from 'types';
+import { fetchDataId } from './Card.service';
 
 type PropsType = {
   data: CardData;
@@ -11,16 +12,10 @@ type PropsType = {
 const Card = ({ data, setActive, getData, setDataId }: PropsType) => {
   const { name, image, id } = data;
 
-  const fetchDataId = (id: number) => {
-    fetch(`https://rickandmortyapi.com/api/character/${id}`)
-      .then((response) => response.json())
-      .then((data: CardData) => getData(data));
-  };
-
   const handlerClick = () => {
     setActive(true);
     setDataId(undefined);
-    fetchDataId(id);
+    fetchDataId(id).then((data) => getData(data));
   };
 
   return (
