@@ -22,10 +22,6 @@ const Search = ({ getFetchData, setData, setIsPending }: PropsType) => {
     searchRef.current = searchValue;
   }, [searchValue]);
 
-  useEffect(() => {
-    return () => localStorage.setItem('searchValue', searchRef.current || '');
-  }, []);
-
   useFetch(() => {
     fetchRequest(query).then((data: FetchData) => getFetchData(data.results));
   }, query);
@@ -36,6 +32,7 @@ const Search = ({ getFetchData, setData, setIsPending }: PropsType) => {
       setData(undefined);
       setIsPending(true);
       setQuery(searchValue);
+      localStorage.setItem('searchValue', searchRef.current || '');
     }
   };
 
