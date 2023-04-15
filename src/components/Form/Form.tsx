@@ -5,14 +5,14 @@ import Select from '../Select/Select';
 import InputRadio from '../InputRadio/InputRadio';
 import InputCheckbox from '../InputCheckbox/InputCheckbox';
 import InputFile from '../InputFile/InputFile';
-import { CardFormType, CardFormTypeSubmit } from 'types';
+import { CardFormType } from 'types';
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { formSlice } from '../../store/reduсers/FormSlice';
+import { useAppDispatch } from '../../hook/redux';
 
-type FormProps = {
-  getData: (data: CardFormTypeSubmit) => void;
-};
-
-const Form = ({ getData }: FormProps) => {
+const Form = () => {
+  const dispatch = useAppDispatch();
+  const { addFormCard, isCard } = formSlice.actions;
   const {
     register,
     handleSubmit,
@@ -22,10 +22,13 @@ const Form = ({ getData }: FormProps) => {
 
   const onSubmit: SubmitHandler<CardFormType> = (data) => {
     const image = URL.createObjectURL(data.image[0]);
-    getData({ ...data, image });
+    dispatch(addFormCard({ ...data, image }));
+    dispatch(isCard(true));
+    setTimeout(() => {
+      dispatch(isCard(false));
+    }, 3000);
     reset();
   };
-
   return (
     <form
       className="form"

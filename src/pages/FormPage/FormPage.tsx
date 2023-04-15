@@ -1,22 +1,15 @@
-import React, { useState } from 'react';
-import { CardFormTypeSubmit } from 'types';
+import React from 'react';
 import Form from '../../components/Form/Form';
 import CardForm from '../../components/CardForm/CardForm';
+import { useAppSelector } from '../../hook/redux';
 
 const FormPage = () => {
-  const [formData, setFormData] = useState<CardFormTypeSubmit[]>([]);
-  const [isCard, setCard] = useState(false);
+  const formData = useAppSelector((state) => state.formReducer.cards);
+  const isCard = useAppSelector((state) => state.formReducer.isCard);
 
-  const getCardFormData = (data: CardFormTypeSubmit) => {
-    setFormData((prev) => [...prev, data]);
-    setCard(true);
-    setTimeout(() => {
-      setCard(false);
-    }, 3000);
-  };
   return (
     <>
-      <Form getData={getCardFormData} />
+      <Form />
       {isCard && (
         <div
           className="title"
