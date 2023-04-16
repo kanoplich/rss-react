@@ -23,11 +23,11 @@ const data: CardData = {
 
 describe('Modal', () => {
   it('Modal renders', () => {
-    render(<Modal active={true} data={data} setActive={() => false} />);
+    render(<Modal data={data} loading={false} fetching={false} />);
     expect(screen.getByText(/morty smith/i)).toBeInTheDocument();
   });
   it('Modal not renders', () => {
-    render(<Modal active={false} data={data} setActive={() => false} />);
+    render(<Modal data={data} loading={true} fetching={false} />);
     expect(screen.queryByText(/morty smith/i)).not.toBeNull();
   });
 });
