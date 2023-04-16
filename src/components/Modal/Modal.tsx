@@ -19,7 +19,11 @@ const Modal = ({ data, loading, fetching }: ModalProps) => {
   };
 
   return (
-    <div className={active ? 'modal active' : 'modal'} onClick={() => handleClick()}>
+    <div
+      className={active ? 'modal active' : 'modal'}
+      onClick={() => handleClick()}
+      data-testid="modal_button"
+    >
       {(loading || fetching) && <div className="spinner"></div>}
       {!fetching && data && (
         <div className="modal__wrapper" onClick={(e) => e.stopPropagation()}>

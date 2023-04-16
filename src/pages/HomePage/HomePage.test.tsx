@@ -1,6 +1,15 @@
-import { describe, it } from 'vitest';
+import { describe, it, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import HomePage from './HomePage';
+
+const mockSelector = vi.fn();
+const mockDispatch = vi.fn();
+
+vi.mock('react-redux', () => ({
+  ...vi.importActual('react-redux'),
+  useSelector: () => mockSelector,
+  useDispatch: () => mockDispatch,
+}));
 
 describe('Home component', () => {
   it('Home renders', () => {

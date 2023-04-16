@@ -3,10 +3,17 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import App from './App';
 import { BrowserRouter, MemoryRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { store } from '../../store/store';
 
 describe('App', () => {
   it('full app rendering/navigating', async () => {
-    render(<App />, { wrapper: BrowserRouter });
+    render(
+      <Provider store={store}>
+        <App />
+      </Provider>,
+      { wrapper: BrowserRouter }
+    );
     const user = userEvent.setup();
     expect(screen.getByText(/home page/i)).toBeInTheDocument();
     await user.click(screen.getByText(/about/i));

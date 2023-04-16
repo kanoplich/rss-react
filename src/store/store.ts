@@ -1,13 +1,13 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import formReducer from './reduсers/FormSlice';
 import modalReducer from './reduсers/ModalSlice';
 import { apiSlice } from './reduсers/apiSlice';
 
-const rootReducer = {
+const rootReducer = combineReducers({
   formReducer,
   modalReducer,
   [apiSlice.reducerPath]: apiSlice.reducer,
-};
+});
 
 export const store = configureStore({
   reducer: rootReducer,
