@@ -4,8 +4,7 @@ import CardForm from '../../components/CardForm/CardForm';
 import { useAppSelector } from '../../hook/redux';
 
 const FormPage = () => {
-  const formData = useAppSelector((state) => state.formReducer.cards);
-  const isCard = useAppSelector((state) => state.formReducer.isCard);
+  const { cards, isCard } = useAppSelector((state) => state.formReducer);
 
   return (
     <>
@@ -19,13 +18,13 @@ const FormPage = () => {
         </div>
       )}
       <div className="line"></div>
-      {formData.length === 0 ? (
+      {cards.length === 0 ? (
         <div className="title" style={{ marginBottom: '50px' }}>
           No card
         </div>
       ) : (
         <div className="card__form_wrapper">
-          {formData.map((data, index) => (
+          {cards.map((data, index) => (
             <CardForm key={index} data={data} />
           ))}
         </div>
