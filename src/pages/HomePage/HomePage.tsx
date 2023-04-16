@@ -1,48 +1,31 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Search from '../../components/Search/Search';
 import Card from '../../components/Card/Card';
-import { CardData } from 'types';
 import Modal from '../../components/Modal/Modal';
+import { useGetApiIdQuery, useGetApiQuery } from '../../store/reduсers/apiSlice';
+import { useAppSelector } from '../../hook/redux';
 
 const HomePage = () => {
-  const [data, setData] = useState<CardData[] | undefined>(undefined);
-  const [dataId, setDataId] = useState<CardData | undefined>(undefined);
-  const [pending, setIsPending] = useState(true);
-  const [modalActive, setModalActive] = useState(false);
-  const getFetchData = (data: CardData[] | undefined) => {
-    if (data === undefined) {
-      setData(data);
-    } else {
-      const sortData: CardData[] = [];
-      for (let i = 0; i < data.length; i++) {
-        if (data[i].id <= 20) sortData.push(data[i]);
-      }
-      setData(sortData.length ? sortData : undefined);
-    }
-    setIsPending(false);
-  };
-  const getFetchDataId = (data: CardData) => {
-    setDataId(data);
-  };
+  const { query, isSkip, id } = useAppSelector((state) => state.modalReducer);
+  const { data, isLoading, isFetching, isError } = useGetApiQuery(query);
+  const {
+    data: dataId,
+    isLoading: loading,
+    isFetching: fetching,
+  } = useGetApiIdQuery(id, { skip: isSkip });
 
   return (
     <>
-      <Search getFetchData={getFetchData} setData={setData} setIsPending={setIsPending} />
+      <Search />
       <div className="card__wrapper">
-        {pending && <div className="spinner"></div>}
-        {data &&
-          data.map((item) => (
-            <Card
-              key={item.id}
-              data={item}
-              setActive={setModalActive}
-              getData={getFetchDataId}
-              setDataId={setDataId}
-            />
-          ))}
-        {!pending && !data && <div className="title">No card</div>}
+        {(isLoading || isFetching) && <div className="spinner"></div>}
+        {isError && <div className="title">No card</div>}
+        {!isError &&
+          !isFetching &&
+          data?.results &&
+          data.results.map((item) => <Card key={item.id} data={item} />)}
       </div>
-      <Modal active={modalActive} setActive={setModalActive} data={dataId} />
+      <Modal data={dataId} loading={loading} fetching={fetching} />
     </>
   );
 };

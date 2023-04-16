@@ -1,21 +1,21 @@
 import React from 'react';
+import { modalSlice } from '../../store/reduсers/ModalSlice';
 import { CardData } from 'types';
-import { fetchDataId } from './Card.service';
+import { useAppDispatch } from '../../hook/redux';
 
 type PropsType = {
   data: CardData;
-  setActive: (active: boolean) => void;
-  getData: (data: CardData) => void;
-  setDataId: (card: CardData | undefined) => void;
 };
 
-const Card = ({ data, setActive, getData, setDataId }: PropsType) => {
+const Card = ({ data }: PropsType) => {
   const { name, image, id } = data;
+  const { isModal, isSkip, identification } = modalSlice.actions;
+  const dispatch = useAppDispatch();
 
   const handlerClick = () => {
-    setActive(true);
-    setDataId(undefined);
-    fetchDataId(id).then((data) => getData(data));
+    dispatch(isModal(true));
+    dispatch(isSkip(false));
+    dispatch(identification(id));
   };
 
   return (

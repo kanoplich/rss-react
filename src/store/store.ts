@@ -1,10 +1,17 @@
 import { configureStore } from '@reduxjs/toolkit';
 import formReducer from './reduсers/FormSlice';
+import modalReducer from './reduсers/ModalSlice';
+import { apiSlice } from './reduсers/apiSlice';
+
+const rootReducer = {
+  formReducer,
+  modalReducer,
+  [apiSlice.reducerPath]: apiSlice.reducer,
+};
 
 export const store = configureStore({
-  reducer: {
-    formReducer,
-  },
+  reducer: rootReducer,
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(apiSlice.middleware),
 });
 
 export type RootState = ReturnType<typeof store.getState>;

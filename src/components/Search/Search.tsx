@@ -1,39 +1,20 @@
-import React, { useEffect, useRef, useState } from 'react';
-import useFetch from '../../hook/useFetch';
-import { CardData, FetchData } from 'types';
-import { fetchRequest } from './Search.service';
+import React, { useState } from 'react';
+import { useAppDispatch, useAppSelector } from '../../hook/redux';
+import { modalSlice } from '../../store/reduсers/ModalSlice';
 
-type PropsType = {
-  getFetchData: (data: CardData[] | undefined) => void;
-  setData: (data: CardData[] | undefined) => void;
-  setIsPending: (active: boolean) => void;
-};
-
-const Search = ({ getFetchData, setData, setIsPending }: PropsType) => {
-  const [searchValue, setSearchValue] = useState(localStorage.getItem('searchValue') || '');
-  const [query, setQuery] = useState(localStorage.getItem('searchValue') || '');
-  const searchRef = useRef<string>();
+const Search = () => {
+  const dispatch = useAppDispatch();
+  const search = useAppSelector((state) => state.modalReducer.query);
+  const { query } = modalSlice.actions;
+  const [searchValue, setSearchValue] = useState(search);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchValue(e.target.value);
   };
 
-  useEffect(() => {
-    searchRef.current = searchValue;
-  }, [searchValue]);
-
-  useFetch(() => {
-    fetchRequest(query).then((data: FetchData) => getFetchData(data.results));
-  }, query);
-
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (query !== searchValue) {
-      setData(undefined);
-      setIsPending(true);
-      setQuery(searchValue);
-      localStorage.setItem('searchValue', searchRef.current || '');
-    }
+    dispatch(query(searchValue));
   };
 
   return (

@@ -1,18 +1,29 @@
 import React from 'react';
+import { useAppDispatch, useAppSelector } from '../../hook/redux';
+import { modalSlice } from '../../store/reduсers/ModalSlice';
 import { CardData } from 'types';
 
 type ModalProps = {
-  setActive: (active: boolean) => void;
-  active: boolean;
   data: CardData | undefined;
+  loading: boolean;
+  fetching: boolean;
 };
 
-const Modal = ({ active, setActive, data }: ModalProps) => {
+const Modal = ({ data, loading, fetching }: ModalProps) => {
+  const active = useAppSelector((state) => state.modalReducer.isModal);
+  const dispatch = useAppDispatch();
+  const { isModal } = modalSlice.actions;
+
+  const handleClick = () => {
+    dispatch(isModal(false));
+  };
+
   return (
-    <div className={active ? 'modal active' : 'modal'} onClick={() => setActive(false)}>
-      {data ? (
+    <div className={active ? 'modal active' : 'modal'} onClick={() => handleClick()}>
+      {(loading || fetching) && <div className="spinner"></div>}
+      {!fetching && data && (
         <div className="modal__wrapper" onClick={(e) => e.stopPropagation()}>
-          <div className="modal__close" onClick={() => setActive(false)}></div>
+          <div className="modal__close" onClick={() => handleClick()}></div>
           <img className="modal__image" src={data.image} alt={data.name} />
           <div className="modal__content">
             <h3 className="modal__name">{data.name}</h3>
@@ -34,8 +45,6 @@ const Modal = ({ active, setActive, data }: ModalProps) => {
             </div>
           </div>
         </div>
-      ) : (
-        <div className="spinner"></div>
       )}
     </div>
   );
