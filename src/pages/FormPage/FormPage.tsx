@@ -18,7 +18,7 @@ const FormPage = () => {
         </div>
       )}
       <div className="line"></div>
-      {cards.length === 0 ? (
+      {!cards || cards.length === 0 ? (
         <div className="title" style={{ marginBottom: '50px' }}>
           No card
         </div>
