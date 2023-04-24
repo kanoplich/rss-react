@@ -19,6 +19,9 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": "./src",
   },
+  "ts-node": {
+    "esm": true,
+  },
   "include": ["vite.config.ts", ".eslintrc.json", "src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
