@@ -5,7 +5,7 @@ const initialState = {
   id: 1,
   query: '',
   isModal: false,
-  isSkip: true,
+  isSkip: false,
 };
 
 describe('modalSlice', () => {

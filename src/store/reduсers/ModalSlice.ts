@@ -11,7 +11,7 @@ const initialState: ModalState = {
   id: 1,
   query: '',
   isModal: false,
-  isSkip: true,
+  isSkip: false,
 };
 
 export const modalSlice = createSlice({

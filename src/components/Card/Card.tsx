@@ -14,7 +14,7 @@ const Card = ({ data }: PropsType) => {
 
   const handlerClick = () => {
     dispatch(isModal(true));
-    dispatch(isSkip(false));
+    dispatch(isSkip(true));
     dispatch(identification(id));
   };
 

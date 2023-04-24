@@ -6,10 +6,9 @@ import { CardData } from 'types';
 type ModalProps = {
   data: CardData | undefined;
   loading: boolean;
-  fetching: boolean;
 };
 
-const Modal = ({ data, loading, fetching }: ModalProps) => {
+const Modal = ({ data, loading }: ModalProps) => {
   const active = useAppSelector((state) => state.modalReducer.isModal);
   const dispatch = useAppDispatch();
   const { isModal } = modalSlice.actions;
@@ -24,8 +23,8 @@ const Modal = ({ data, loading, fetching }: ModalProps) => {
       onClick={() => handleClick()}
       data-testid="modal_button"
     >
-      {(loading || fetching) && <div className="spinner"></div>}
-      {!fetching && data && (
+      {loading && <div className="spinner"></div>}
+      {data && (
         <div className="modal__wrapper" onClick={(e) => e.stopPropagation()}>
           <div className="modal__close" onClick={() => handleClick()}></div>
           <img className="modal__image" src={data.image} alt={data.name} />
