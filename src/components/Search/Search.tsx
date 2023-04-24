@@ -24,7 +24,7 @@ const Search = () => {
           type="text"
           className="search"
           placeholder="search..."
-          value={searchValue}
+          value={searchValue || ''}
           onChange={(e) => handleChange(e)}
         />
         <button className="button">search</button>

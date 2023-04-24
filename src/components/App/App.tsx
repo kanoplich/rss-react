@@ -5,7 +5,6 @@ import AboutPage from '../../pages/AboutPage/AboutPage';
 import FormPage from '../../pages/FormPage/FormPage';
 import NotFound from '../../pages/NotFoundPage/NotFound';
 import Layout from '../Layout/Layout';
-import '../../index.css';
 
 function App() {
   return (
