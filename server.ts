@@ -24,7 +24,7 @@ async function createServer() {
       template = await vite.transformIndexHtml(url, template);
 
       const parts = template.split('<!--app-html-->');
-      const { renderApp } = await vite.ssrLoadModule('./src/entry-server.tsx');
+      const renderApp = (await vite.ssrLoadModule('./src/entry-server.tsx')).renderApp;
 
       const { pipe } = await renderApp(url, {
         onShellReady() {
@@ -32,7 +32,7 @@ async function createServer() {
           pipe(res);
         },
         onAllReady() {
-          res.write(parts[0] + parts[1]);
+          res.write(parts[1]);
           res.end();
         },
       });

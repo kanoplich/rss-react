@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import Search from '../../components/Search/Search';
 import Card from '../../components/Card/Card';
 import Modal from '../../components/Modal/Modal';
-// import { useGetApiIdQuery, useGetApiQuery } from '../../store/reduсers/apiSlice';
 import { fetchData, fetchDataId } from '../../store/reduсers/apiSlice';
 import { useAppDispatch, useAppSelector } from '../../hook/redux';
 

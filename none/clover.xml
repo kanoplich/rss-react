@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1682872581197" clover="3.2.0">
+  <project timestamp="1682872581197" name="All files">
+    <metrics statements="203" coveredstatements="176" conditionals="56" coveredconditionals="48" methods="82" coveredmethods="66" elements="341" coveredelements="290" complexity="0" loc="203" ncloc="203" packages="23" files="49" classes="49"/>
+    <package name="src">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="entry-client.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/entry-client.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="9" count="8" type="stmt"/>
+      </file>
+      <file name="entry-server.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/entry-server.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="setupTests.ts" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/setupTests.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="types.ts" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/types.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.components.App">
+      <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
+      <file name="App.test.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/components/App/App.test.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="App.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/components/App/App.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="1" count="56" type="cond" truecount="1" falsecount="0"/>
+        <line num="10" count="12" type="stmt"/>
+        <line num="23" count="8" type="stmt"/>
+        <line num="25" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Card">
+      <metrics statements="12" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
+      <file name="Card.test.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/components/Card/Card.test.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="Card.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/components/Card/Card.tsx">
+        <metrics statements="12" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
+        <line num="10" count="40" type="stmt"/>
+        <line num="11" count="40" type="stmt"/>
+        <line num="12" count="40" type="stmt"/>
+        <line num="13" count="40" type="stmt"/>
+        <line num="15" count="40" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="21" count="40" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="27" count="8" type="stmt"/>
+        <line num="29" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.CardForm">
+      <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
+      <file name="CardForm.test.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/components/CardForm/CardForm.test.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="CardForm.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/components/CardForm/CardForm.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="1" count="56" type="cond" truecount="1" falsecount="0"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="26" count="8" type="stmt"/>
+        <line num="28" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Footer">
+      <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
+      <file name="Footer.test.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/components/Footer/Footer.test.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="Footer.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/components/Footer/Footer.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="1" count="56" type="cond" truecount="1" falsecount="0"/>
+        <line num="3" count="8" type="stmt"/>
+        <line num="4" count="12" type="stmt"/>
+        <line num="23" count="8" type="stmt"/>
+        <line num="25" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Form">
+      <metrics statements="14" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
+      <file name="Form.test.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/components/Form/Form.test.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="Form.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/components/Form/Form.tsx">
+        <metrics statements="14" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
+        <line num="13" count="8" type="stmt"/>
+        <line num="14" count="7" type="stmt"/>
+        <line num="15" count="7" type="stmt"/>
+        <line num="21" count="8" type="stmt"/>
+        <line num="23" count="7" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="32" count="7" type="stmt"/>
+        <line num="52" count="8" type="stmt"/>
+        <line num="54" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Header">
+      <metrics statements="20" coveredstatements="14" conditionals="4" coveredconditionals="3" methods="6" coveredmethods="2"/>
+      <file name="Header.test.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/components/Header/Header.test.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="Header.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/components/Header/Header.tsx">
+        <metrics statements="20" coveredstatements="14" conditionals="4" coveredconditionals="3" methods="6" coveredmethods="2"/>
+        <line num="4" count="17" type="stmt"/>
+        <line num="5" count="17" type="stmt"/>
+        <line num="7" count="15" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="11" count="15" type="stmt"/>
+        <line num="12" count="6" type="cond" truecount="3" falsecount="1"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="28" count="15" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="46" count="8" type="stmt"/>
+        <line num="48" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.InputCheckbox">
+      <metrics statements="5" coveredstatements="5" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+      <file name="InputCheckbox.test.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/components/InputCheckbox/InputCheckbox.test.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="InputCheckbox.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/components/InputCheckbox/InputCheckbox.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <line num="1" count="56" type="cond" truecount="1" falsecount="0"/>
+        <line num="10" count="8" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
+        <line num="26" count="8" type="stmt"/>
+        <line num="28" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.InputDate">
+      <metrics statements="10" coveredstatements="10" conditionals="5" coveredconditionals="5" methods="4" coveredmethods="4"/>
+      <file name="InputDate.test.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/components/InputDate/InputDate.test.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="InputDate.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/components/InputDate/InputDate.tsx">
+        <metrics statements="10" coveredstatements="10" conditionals="5" coveredconditionals="5" methods="4" coveredmethods="4"/>
+        <line num="1" count="56" type="cond" truecount="1" falsecount="0"/>
+        <line num="10" count="8" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="17" count="7" type="stmt"/>
+        <line num="27" count="4" type="stmt"/>
+        <line num="38" count="8" type="stmt"/>
+        <line num="40" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.InputFile">
+      <metrics statements="8" coveredstatements="8" conditionals="5" coveredconditionals="4" methods="4" coveredmethods="4"/>
+      <file name="InputFile.test.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/components/InputFile/InputFile.test.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="InputFile.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/components/InputFile/InputFile.tsx">
+        <metrics statements="8" coveredstatements="8" conditionals="5" coveredconditionals="4" methods="4" coveredmethods="4"/>
+        <line num="1" count="56" type="cond" truecount="1" falsecount="0"/>
+        <line num="10" count="8" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="7" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="35" count="8" type="stmt"/>
+        <line num="37" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.InputRadio">
+      <metrics statements="5" coveredstatements="5" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+      <file name="InputRadio.test.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/components/InputRadio/InputRadio.test.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="InputRadio.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/components/InputRadio/InputRadio.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <line num="1" count="56" type="cond" truecount="1" falsecount="0"/>
+        <line num="10" count="8" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
+        <line num="43" count="8" type="stmt"/>
+        <line num="45" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.InputText">
+      <metrics statements="5" coveredstatements="5" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+      <file name="InputText.test.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/components/InputText/InputText.test.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="InputText.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/components/InputText/InputText.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <line num="1" count="56" type="cond" truecount="1" falsecount="0"/>
+        <line num="10" count="8" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
+        <line num="37" count="8" type="stmt"/>
+        <line num="39" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Layout">
+      <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
+      <file name="Layout.test.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/components/Layout/Layout.test.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="Layout.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/components/Layout/Layout.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="1" count="56" type="cond" truecount="1" falsecount="0"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="7" count="12" type="stmt"/>
+        <line num="16" count="8" type="stmt"/>
+        <line num="18" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Modal">
+      <metrics statements="12" coveredstatements="8" conditionals="6" coveredconditionals="4" methods="7" coveredmethods="3"/>
+      <file name="Modal.test.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/components/Modal/Modal.test.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="Modal.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/components/Modal/Modal.tsx">
+        <metrics statements="12" coveredstatements="8" conditionals="6" coveredconditionals="4" methods="7" coveredmethods="3"/>
+        <line num="11" count="11" type="stmt"/>
+        <line num="12" count="20" type="stmt"/>
+        <line num="13" count="11" type="stmt"/>
+        <line num="14" count="11" type="stmt"/>
+        <line num="16" count="11" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="20" count="11" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="54" count="8" type="stmt"/>
+        <line num="56" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Search">
+      <metrics statements="15" coveredstatements="15" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="7"/>
+      <file name="Search.test.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/components/Search/Search.test.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="Search.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/components/Search/Search.tsx">
+        <metrics statements="15" coveredstatements="15" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="7"/>
+        <line num="5" count="22" type="stmt"/>
+        <line num="6" count="22" type="stmt"/>
+        <line num="7" count="31" type="stmt"/>
+        <line num="8" count="22" type="stmt"/>
+        <line num="9" count="22" type="stmt"/>
+        <line num="11" count="22" type="stmt"/>
+        <line num="12" count="11" type="stmt"/>
+        <line num="15" count="22" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="20" count="22" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="28" count="11" type="stmt"/>
+        <line num="34" count="8" type="stmt"/>
+        <line num="36" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Select">
+      <metrics statements="7" coveredstatements="7" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="3"/>
+      <file name="Select.test.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/components/Select/Select.test.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="Select.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/components/Select/Select.tsx">
+        <metrics statements="7" coveredstatements="7" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="3"/>
+        <line num="1" count="56" type="cond" truecount="1" falsecount="0"/>
+        <line num="10" count="8" type="stmt"/>
+        <line num="25" count="8" type="stmt"/>
+        <line num="26" count="7" type="stmt"/>
+        <line num="32" count="84" type="stmt"/>
+        <line num="45" count="8" type="stmt"/>
+        <line num="47" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.hook">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="redux.ts" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/hook/redux.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="8" type="stmt"/>
+        <line num="5" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages.AboutPage">
+      <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
+      <file name="AboutPage.test.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/pages/AboutPage/AboutPage.test.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="AboutPage.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/pages/AboutPage/AboutPage.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="1" count="56" type="cond" truecount="1" falsecount="0"/>
+        <line num="3" count="8" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages.FormPage">
+      <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="6" methods="4" coveredmethods="4"/>
+      <file name="FormPage.test.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/pages/FormPage/FormPage.test.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="FormPage.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/pages/FormPage/FormPage.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="6" methods="4" coveredmethods="4"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="34" count="8" type="stmt"/>
+        <line num="36" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages.HomePage">
+      <metrics statements="13" coveredstatements="13" conditionals="7" coveredconditionals="6" methods="7" coveredmethods="7"/>
+      <file name="HomePage.test.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/pages/HomePage/HomePage.test.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="HomePage.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/pages/HomePage/HomePage.tsx">
+        <metrics statements="13" coveredstatements="13" conditionals="7" coveredconditionals="6" methods="7" coveredmethods="7"/>
+        <line num="8" count="11" type="stmt"/>
+        <line num="9" count="20" type="stmt"/>
+        <line num="10" count="11" type="stmt"/>
+        <line num="11" count="20" type="stmt"/>
+        <line num="14" count="11" type="stmt"/>
+        <line num="16" count="11" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="20" count="11" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="24" count="11" type="stmt"/>
+        <line num="32" count="40" type="stmt"/>
+        <line num="37" count="8" type="stmt"/>
+        <line num="39" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages.NotFoundPage">
+      <metrics statements="5" coveredstatements="4" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="1"/>
+      <file name="NotFound.test.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/pages/NotFoundPage/NotFound.test.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="NotFound.tsx" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/pages/NotFoundPage/NotFound.tsx">
+        <metrics statements="5" coveredstatements="4" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="1"/>
+        <line num="1" count="56" type="cond" truecount="1" falsecount="0"/>
+        <line num="3" count="8" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="10" count="8" type="stmt"/>
+        <line num="12" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.store">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="store.ts" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/store/store.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="6" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.store.reduсers">
+      <metrics statements="38" coveredstatements="27" conditionals="3" coveredconditionals="0" methods="14" coveredmethods="10"/>
+      <file name="FormSlice.test.ts" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/store/reduсers/FormSlice.test.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="FormSlice.ts" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/store/reduсers/FormSlice.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="9" count="8" type="stmt"/>
+        <line num="14" count="8" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+      </file>
+      <file name="ModalSlice.test.ts" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/store/reduсers/ModalSlice.test.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="ModalSlice.ts" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/store/reduсers/ModalSlice.ts">
+        <metrics statements="6" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
+        <line num="10" count="8" type="stmt"/>
+        <line num="17" count="8" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+      </file>
+      <file name="apiSlice.ts" path="D:/RS_School/2023/REACT2023Q1/rss-react/src/store/reduсers/apiSlice.ts">
+        <metrics statements="28" coveredstatements="20" conditionals="3" coveredconditionals="0" methods="8" coveredmethods="7"/>
+        <line num="12" count="8" type="stmt"/>
+        <line num="28" count="8" type="stmt"/>
+        <line num="29" count="3" type="stmt"/>
+        <line num="31" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="39" count="8" type="stmt"/>
+        <line num="42" count="2" type="cond" truecount="0" falsecount="1"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="45" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="55" count="8" type="stmt"/>
+        <line num="60" count="8" type="stmt"/>
+        <line num="62" count="3" type="stmt"/>
+        <line num="63" count="3" type="stmt"/>
+        <line num="64" count="3" type="stmt"/>
+        <line num="67" count="1" type="stmt"/>
+        <line num="68" count="1" type="stmt"/>
+        <line num="69" count="1" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
+        <line num="76" count="2" type="stmt"/>
+        <line num="77" count="2" type="stmt"/>
+        <line num="80" count="2" type="stmt"/>
+        <line num="81" count="2" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

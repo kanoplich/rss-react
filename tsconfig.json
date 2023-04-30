@@ -15,13 +15,17 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+    "types": ["vitest/globals", "@testing-library/jest-dom"],
     "noImplicitAny": true,
     "noFallthroughCasesInSwitch": true,
-    "baseUrl": "./src",
+    "baseUrl": "./src"
   },
   "ts-node": {
     "esm": true,
+    "transpileOnly": true,
+    "experimentalSpecifierResolution": "node"
   },
-  "include": ["vite.config.ts", ".eslintrc.json", "src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["src", "vite.config.ts", "styled.d.ts"],
+  "references": [{ "path": "./tsconfig.node.json" }],
+  "exclude": ["./cypress.config.ts"]
 }

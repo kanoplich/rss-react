@@ -33,15 +33,15 @@ vi.mock('react-redux', () => ({
 
 describe('Modal', () => {
   it('Modal renders', () => {
-    render(<Modal data={data} loading={false} fetching={false} />);
+    render(<Modal data={data} loading={false} />);
     expect(screen.getByText(/morty smith/i)).toBeInTheDocument();
   });
   it('Modal not renders', () => {
-    render(<Modal data={data} loading={true} fetching={false} />);
+    render(<Modal data={data} loading={true} />);
     expect(screen.queryByText(/morty smith/i)).not.toBeNull();
   });
   it('dispatch actions', async () => {
-    render(<Modal data={data} loading={true} fetching={false} />);
+    render(<Modal data={data} loading={true} />);
     await userEvent.click(screen.getByTestId('modal_button'));
     expect(mockDispatch).toHaveBeenCalledTimes(1);
   });
